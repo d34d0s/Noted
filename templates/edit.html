@@ -1,0 +1,13 @@
+{{ define "content" }}
+<h1>Edit Note</h1>
+<form action="/note/edit/{{ .ID }}" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{ .Title }}" required>
+    <br>
+    <label for="content">Content:</label>
+    <textarea name="content" id="content" required>{{ .Content }}</textarea>
+    <br>
+    <button type="submit">Update Note</button>
+</form>
+<a href="/">Cancel</a>
+{{ end }}

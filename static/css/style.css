@@ -1,0 +1,143 @@
+/* Variables */
+:root {
+    --modern-black: #1a1a1a;
+    --darker-black: #333333;
+    --lighter-black: #262626;
+    --light-grey: #eaeaea;
+    --subdued-text: #aaaaaa;
+    --sky-blue: #00bfff;
+    --orange: #ff6600;
+    --orange-hover: #e65c00;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --font-family: Arial, sans-serif;
+    --transition-time: 0.3s;
+    --border-radius: 8px;
+    --max-content-width: 800px;
+}
+
+/* Base styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--modern-black);
+    color: var(--light-grey);
+}
+
+/* Header */
+header {
+    background-color: var(--darker-black);
+    padding: 20px;
+    text-align: center;
+    color: var(--light-grey);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Links */
+a {
+    color: var(--sky-blue);
+    text-decoration: none;
+    transition: color var(--transition-time);
+}
+
+a:hover {
+    color: var(--orange);
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+}
+
+/* Notes List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    background-color: var(--lighter-black);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+li h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--sky-blue);
+}
+
+li p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+li small {
+    font-size: 0.9rem;
+    color: var(--subdued-text);
+}
+
+/* Buttons */
+button {
+    background-color: var(--orange);
+    color: var(--light-grey);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-time);
+}
+
+button:hover {
+    background-color: var(--orange-hover);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--light-grey);
+}
+
+input[type="text"],
+textarea {
+    background-color: var(--darker-black);
+    color: var(--light-grey);
+    border: 1px solid #555555;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--sky-blue);
+    outline: none;
+    box-shadow: 0 0 5px var(--sky-blue);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--darker-black);
+    color: var(--subdued-text);
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
